@@ -5,13 +5,15 @@ FROM haproxy:1.8
 RUN apt update && apt install -y iptables && rm -rf /var/lib/apt/lists/* 
 
 # Shell script to start HAProxy
-COPY docker/proxy/start.sh /start.sh
+COPY docker/revproxy/start.sh /start.sh
+RUN chmod +x /start.sh
 
 # HAProxy
-COPY docker/proxy/haproxy/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+COPY docker/revproxy/haproxy/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+RUN touch fake.log
 
 EXPOSE 8082/tcp
 
 USER root
 
-CMD ["/start.sh"]
+#CMD ["/start.sh"]

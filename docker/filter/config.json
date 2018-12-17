@@ -4,8 +4,8 @@
     "configListenPort": "9001",
 
     "nodeosProtocol": "http",
-    "nodeosUrl": "10.0.11.10",
-    "nodeosPort": "18011",
+    "nodeosUrl": "172.18.0.14",
+    "nodeosPort": "8082",
 
     "contractBlackList": {
         "bad": true

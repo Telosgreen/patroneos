@@ -5,7 +5,15 @@ RUN cd /repo && go build -o patroneosd *.go
 
 FROM haproxy:1.8
 
-RUN apt update && apt install -y fail2ban iptables && rm -rf /var/lib/apt/lists/* && rm /etc/fail2ban/filter.d/*.conf
+RUN apt update && apt install -y rsyslog fail2ban iptables && rm -rf /var/lib/apt/lists/* && rm /etc/fail2ban/filter.d/*.conf
+
+RUN mkdir -p /etc/rsyslog.d/  && \
+    touch /var/log/haproxy.log
+# here's the catch: by creating a soft-link that 
+# links /var/log/haproxy.log to /dev/stdout whatever 
+# rsyslogd writes to the file will endup being
+# propagated to the standard output of the container
+RUN ln -sf /dev/stdout /var/log/haproxy.log
 
 RUN mkdir -p /etc/patroneos
 

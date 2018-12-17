@@ -1,11 +1,11 @@
 {
     "listenIP": "",
-    "listenPort": "8080",
+    "listenPort": "80",
     "configListenPort": "9000",
 
     "nodeosProtocol": "http",
-    "nodeosUrl": "localhost",
-    "nodeosPort": "8888",
+    "nodeosUrl": "10.0.11.10",
+    "nodeosPort": "18011",
 
     "contractBlackList": {
         "currency": true

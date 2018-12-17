@@ -19,3 +19,10 @@ main
 
 # dist folder containing compiled Binaries
 dist/**/*
+
+*.orig
+my_simple_config_http.ini
+my_simple_config_https.ini
+patroneos.log
+
+

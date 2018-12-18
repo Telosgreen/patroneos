@@ -8,6 +8,8 @@ services:
         networks:
             default:
                 ipv4_address: 172.18.0.12
+        volumes:
+            - /dev/log:/dev/log
         ports:
             - "4433:4433"
             - "8080:8080"

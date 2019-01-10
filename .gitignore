@@ -24,5 +24,6 @@ dist/**/*
 my_simple_config_http.ini
 my_simple_config_https.ini
 patroneos.log
+ssl.pem
 
 

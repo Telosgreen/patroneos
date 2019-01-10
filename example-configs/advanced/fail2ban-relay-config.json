@@ -2,7 +2,7 @@
 
     "listenIP": "",
     "configListenPort": "9000",
-    "listenPort": "8080",
+    "listenPort": "80",
 
     "nodeosProtocol": "http",
     "nodeosUrl": "localhost",

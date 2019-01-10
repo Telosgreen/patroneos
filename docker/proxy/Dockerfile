@@ -36,8 +36,8 @@ COPY docker/proxy/fail2ban/filter.d/*.conf /etc/fail2ban/filter.d/
 COPY docker/proxy/fail2ban/fail2ban.d/*.conf /etc/fail2ban/fail2ban.d/
 RUN rm /etc/fail2ban/jail.d/defaults-debian.conf && mkdir -p /var/run/fail2ban
 
-EXPOSE 4433/tcp
-EXPOSE 8080/tcp
+EXPOSE 443/tcp
+EXPOSE 80/tcp
 EXPOSE 9999/tcp
 
 USER root
